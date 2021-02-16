@@ -1,0 +1,54 @@
+*{
+    font-family: 'Inter',Helvetica,sans-serif;
+}
+
+
+/**************** NAV *****************/
+
+/* ------- Structure nav ------- */
+.navbar{
+    margin-top: 20px;
+}
+.navbar-fixed-top {
+    border-width: 0 0 0px;
+}
+
+.navbar-brand > img {
+    display: block;
+    height: 30px;
+}
+
+.navbar-brand {
+    padding: 10px 15px;
+}
+
+.my-nav {
+    padding-left: 50px;
+}
+
+
+.navbar-right > li > .btn-group > .btn {
+    padding: 7px 15px;
+    margin-top: 6px;
+}
+
+
+/* ------- Style Nav ------- */
+.navbar > *, .navbar .btn-group > *{
+    font-weight: bold;
+    font-size: 15px;
+}
+
+.my-btn-login{
+    border-color: #fff;
+}
+
+.my-btn-sign_up{
+    border-color: #016aff;
+    color: #016aff;
+}
+
+/* Modifica dimensione caret nav (menù a discesa) */
+.{
+    font-size: 20px;
+}
