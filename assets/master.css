@@ -3,11 +3,16 @@
 }
 
 
+
+
+
 /**************** NAV *****************/
 
 /* ------- Structure nav ------- */
 .navbar{
-    margin-top: 20px;
+
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
 .navbar-fixed-top {
     border-width: 0 0 0px;
@@ -39,8 +44,12 @@
     font-size: 15px;
 }
 
+.navbar-default .navbar-nav>li>a {
+    color: black;
+}
+
 .my-btn-login{
-    border-color: #fff;
+    border-color: #ffffff;
 }
 
 .my-btn-sign_up{
@@ -49,6 +58,138 @@
 }
 
 /* Modifica dimensione caret nav (menù a discesa) */
-.{
-    font-size: 20px;
+.glyphicon-menu-down{
+    font-size: 12px;
+}
+
+
+/**************** JUMBOTRON *****************/
+
+/* bg-image-jumbotron */
+.bg-jumbotron{
+    background-image: url(img/bg-sea.svg);
+    background-size: cover;
+    background-position: center;
+
+}
+
+.icon-google{
+    display: inline-block;
+    position: absolute;
+    top: 7px;
+    left: 10px;
+}
+
+
+
+
+
+/**************** MAIN *****************/
+.thumbnail {
+    border: none;
+}
+.thumbnail>img {
+    height: 120px;
+}
+
+
+
+/*---- Deploy-And-Scale-----*/
+
+
+/* vertical select/btn */
+[role='Deploy-And-Scale']  .btn-group-vertical{
+    border-left: 1px solid yellow;
+}
+
+[role='Deploy-And-Scale']  .btn-group-vertical > .btn-group-lg:hover{
+    border-left: 2px solid blue;
+}
+
+
+
+
+
+
+
+
+
+
+/* input property */
+.border-none{
+    border: none;
+}
+
+
+
+
+
+
+
+
+/* bg */
+.bg-white{
+    background-color: #ffffff;
+}
+
+/* text-property */
+.text-white{
+    color: #ffffff;
+}
+
+.text-blue{
+    color:#0067FF;
+}
+
+.text-grey{
+    color: #777;
+}
+
+.text-shadow{
+    text-shadow: 1px 1px 1px #333;
+}
+
+.text-align-initial{
+    text-align: initial;
+}
+
+
+
+/* font-size */
+.font-size-21px{
+    font-size: 21px;
+}
+
+/* margin */
+
+
+.m-top-100px{
+    margin-top: 100px;
+}
+
+.m-top-50px{
+    margin-top: 50px;
+}
+
+.m-top-30px{
+    margin-top: 30px;
+}
+
+.m-left-10px{
+    padding-left: 28px;
+}
+
+
+.m-top-bot-40px{
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.m-bot-80px{
+    margin-bottom: 80px;
+}
+
+
+.pos-relative{
+    position: relative;
 }
