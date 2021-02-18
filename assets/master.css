@@ -3,11 +3,53 @@
 }
 
 
+/* Firefox fix Table bootstrap
+For more information,
+read this Stack Overflow answer
+-------------------------------
+--link = https://stackoverflow.com/questions/17408815/fieldset-resizes-wrong-appears-to-have-unremovable-min-width-min-content/17863685#17863685
+--------------------------------*/
+@-moz-document url-prefix() {
+fieldset { display: table-cell; }
+}
+/*----------END FIX--------------*/
+
+
+/* -------------local to html.---------------*/
+
+/* radio */
+.radio-inline+.radio-inline {
+    margin-left: 5px;
+    padding-left: 0;
+}
+
+.radio-inline input[type=radio] {
+    position: static;
+}
+
+/* Carousel */
+#Designed-for-developers .my-btn-arrow,
+#Development-teams .my-btn-arrow{
+    background-color: inherit;
+    border: none;
+    font-size: 30px;
+}
+
+/* Table hover */
+.table>tbody>tr:hover{
+    background: linear-gradient(135deg, #120038 20%, #2a35b0 80%);
+}
+
+
+/* BG-ROWS*/
+#Service-from-12-regions, #Get-started-now{
+    background: linear-gradient(135deg, #120038 20%, #2a35b0 80%);
+}
+/* -------------------------------------------------- */
 
 
 
-/**************** NAV *****************/
-
+/*********************** NAV ***********************/
 /* ------- Structure nav ------- */
 .navbar{
 
@@ -26,11 +68,6 @@
 .navbar-brand {
     padding: 10px 15px;
 }
-
-.my-nav {
-    padding-left: 50px;
-}
-
 
 .navbar-right > li > .btn-group > .btn {
     padding: 7px 15px;
@@ -63,14 +100,20 @@
 }
 
 
+
 /**************** JUMBOTRON *****************/
+.jumbotron{
+    margin-bottom: 0;
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
 
 /* bg-image-jumbotron */
 .bg-jumbotron{
     background-image: url(img/bg-sea.svg);
     background-size: cover;
     background-position: center;
-
 }
 
 .icon-google{
@@ -85,25 +128,179 @@
 
 
 /**************** MAIN *****************/
-.thumbnail {
+.thumbnail{
+    background-color: inherit;
+}
+
+
+[role='partner-group']  .thumbnail{
     border: none;
 }
-.thumbnail>img {
+
+[role='partner-group']  .thumbnail > img{
     height: 120px;
 }
 
 
 
-/*---- Deploy-And-Scale-----*/
 
+/* *** Section: Deploy-And-Scale-----*/
 
-/* vertical select/btn */
+/* ---vertical select/btn--- */
 [role='Deploy-And-Scale']  .btn-group-vertical{
     border-left: 1px solid yellow;
 }
 
+[role='Deploy-And-Scale']  .btn-group-vertical > .btn-group-lg > .btn{
+    line-height: 2.333333;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
 [role='Deploy-And-Scale']  .btn-group-vertical > .btn-group-lg:hover{
+    /* TODO: cambiare colore */
     border-left: 2px solid blue;
+}
+
+
+/* Thumbnail Deploy-And-Scale*/
+[role='Deploy-And-Scale']  .thumbnail{
+    border: none;
+}
+
+[role='Deploy-And-Scale']  .thumbnail>img {
+    margin-left: 9px;
+    margin-bottom: 0;
+}
+
+[role='Deploy-And-Scale']  .thumbnail > .caption >h3{
+    margin-top: 5px;
+}
+
+
+/* *** Section:  Designed-for-developers--- */
+#Designed-for-developers input[type=radio],
+#Development-teams input[type=radio]{
+    margin: 0px;
+}
+
+#Designed-for-developers .my-btn-arrow-left,
+#Designed-for-developers .my-btn-arrow-right{
+    margin-top: calc(100% + 36px / 2);
+    font-size: 30px;
+}
+
+
+
+
+/* *** Section: The-features-your-business--- */
+#The-features-your-business .thumbnail{
+    /* border: none; */
+}
+
+#The-features-your-business .thumbnail > img{
+    height: 120px;
+}
+
+#The-features-your-business .thumbnail{
+    border: none;
+}
+
+#The-features-your-business .thumbnail>img {
+    margin-left: 9px;
+    margin-bottom: 0;
+    height: 50px;
+}
+
+#The-features-your-business .thumbnail > .caption >h3{
+    margin-top: 5px;
+}
+
+
+
+/* *** Section:  Service-from-12-regions--- */
+
+/* Table service 12 region */
+#Service-from-12-regions .table>tbody>tr>td {
+    border-top: none;
+    border-bottom: 1px solid #ddd;
+}
+
+
+#Service-from-12-regions .table>tbody>tr>td > a {
+    color: #2fb900;
+}
+
+#Service-from-12-regions .table>tbody>tr:hover {
+    color: #2fb900;
+
+}
+
+
+
+/* *** Section: Get-started-now-----*/
+#Get-started-now button:hover{
+    background-color: #2fb900;
+    color: #2a35b0;
+}
+
+
+/* *** Section: Development-teams-----*/
+
+#Development-teams .my-btn-arrow-left,
+#Development-teams .my-btn-arrow-right{
+    margin-top: calc(50% + 36px / 2);
+    font-size: 30px;
+}
+
+
+
+
+
+/**************** FOOTER *****************/
+/* bg-footer */
+[role='footer']{
+    background: linear-gradient(15deg, #120038 60%, #2a35b0 100%);
+}
+
+/* logo footer */
+[role='footer'] .logo-footer{
+    height: 50px;
+    width: 50px;
+}
+
+/* Address company*/
+address > span{
+    padding-right: 10px;
+}
+
+/* icons social */
+.fa-social{
+    height: 20px;
+    width: 20px;
+
+}
+
+.fa-social:hover{
+    color: #2fb900;
+}
+
+/* Settings Table footer*/
+[role='footer'] .table>tbody>tr>td {
+    border-top: none;
+}
+
+[role='footer'] .table>tbody>tr>td>a {
+    color: #ccc;
+    opacity: 90%;
+}
+
+[role='footer'] .table>thead>tr>th {
+    border: none;
+}
+
+[role='footer'] .table>tbody>tr>td > a:hover{
+    color: #2fb900;
 }
 
 
@@ -115,22 +312,23 @@
 
 
 
+/* TODO: da controllare input-property */
 /* input property */
 .border-none{
     border: none;
 }
 
-
-
-
-
-
-
-
 /* bg */
 .bg-white{
     background-color: #ffffff;
 }
+
+.bg-lightgrey{
+    background-color:  #f8f8f8;
+}
+
+
+
 
 /* text-property */
 .text-white{
@@ -145,6 +343,18 @@
     color: #777;
 }
 
+.text-lighten{
+    color: #ccc;
+    opacity: 60%;
+}
+
+.text-lightgrey{
+    color: #ccc;
+    opacity: 90%;
+}
+
+
+/* text utility */
 .text-shadow{
     text-shadow: 1px 1px 1px #333;
 }
@@ -154,17 +364,25 @@
 }
 
 
-
 /* font-size */
 .font-size-21px{
     font-size: 21px;
 }
 
-/* margin */
+.font-size-15px{
+    font-size: 15px;
+}
 
 
+/* Margin classes */
+
+/* Margin top*/
 .m-top-100px{
     margin-top: 100px;
+}
+
+.m-top-80px{
+    margin-top: 80px;
 }
 
 .m-top-50px{
@@ -175,21 +393,59 @@
     margin-top: 30px;
 }
 
+.m-top-20px{
+    margin-top: 20px;
+}
+
 .m-left-10px{
     padding-left: 28px;
 }
 
 
+/* Margin bottom */
+.m-bot-80px{
+    margin-bottom: 80px;
+}
+
+.m-bot-50px{
+    margin-bottom: 50px;
+}
+
+.m-bot-20px{
+    margin-bottom: 20px;
+}
+
+.m-bot-10px{
+    margin-bottom: 10px;
+}
+
+
+
+
+
+/* Other margin */
 .m-top-bot-40px{
     margin-top: 40px;
     margin-bottom: 40px;
 }
 
-.m-bot-80px{
-    margin-bottom: 80px;
-}
 
-
+/* Utility manipolation tag */
 .pos-relative{
     position: relative;
+}
+
+.d-inline-block{
+    display: inline-block;
+}
+
+.d-block{
+    display: block;
+}
+
+.centering{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
 }
